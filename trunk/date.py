@@ -27,7 +27,29 @@ class myfile:
 	file = open_f()
 	def it(self, say='hi'):
 		print say 
+def read_cat():
+	f = open('cat.dat', 'r')
+	data = f.readlines()
+	f.close()
+	return data
+def write_cat(data):
+	z = read_cat()
+	f = open('cat.dat', 'w')
+	data = data + '\n'
+	z.append(data)
+	z.sort()
+	f.writelines(z)
+	f.close()
+
+def get_cat():
+	print "Cat Name"
+	data = raw_input(':>')
+	write_cat(data)	
 	
+def print_cat():
+	data = read_cat()
+	for items in data:
+		print items, 
 def getdata():
 	UID = str(time.time())
 	date = ND()
@@ -45,13 +67,14 @@ def getdata():
 	print "To/From"
 	acct_2 = raw_input(":>")
 	print "Category"
-	cat = raw_input(':>')
+	print_cat()
+	print get_cat()
 	print "Comment/Memo:"
 	memo = raw_input(':>')
 	fmt = "%s\t%s\t%s\t%s\t%s\t%s\t%s"
 	towrite = fmt % (date, UID, amt, acct_1, acct_2, cat, memo)
 	write_f(towrite)
-	#towrite = date + '\t' + UID + '\t' + amt + '\t'+ acct_1 + '\t' + acct_2 + '\t' + cat + '\t' + memo; write_f(towrite)
+	
 getdata()
 it = myfile
 it.file = open_f()
@@ -66,4 +89,3 @@ class MyClass:
 	def f(self):
 		return 'Hello World'
 	
-
