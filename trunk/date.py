@@ -32,24 +32,41 @@ def read_cat():
 	data = f.readlines()
 	f.close()
 	return data
-def write_cat(data):
+class cat_class:
+	cat_no = {}
+def write_cat(no, data):
 	z = read_cat()
 	f = open('cat.dat', 'w')
-	data = data + '\n'
+	data = no + '\t' + data + '\n'
 	z.append(data)
 	z.sort()
 	f.writelines(z)
 	f.close()
-
+def put_cat():
+	data = read_cat()
+	for i in data:
+		(no, name) = i.split()
+		cat_class.cat_no[no] = name
 def get_cat():
+	put_cat()				#when should I do this?
 	print "Cat Name"
 	data = raw_input(':>')
-	write_cat(data)	
-	
+	if cat_class.cat_no.has_key(data):	#this doesn't work.  I can perhaps use the name as key, and the no. as value? 
+		return data			#or, let none mean enter new value, easier to test against, but it means no data
+	else:					#validation.
+		write_cat('6', data)
+		return data
+	#write_cat(data)	
+ 	
 def print_cat():
-	data = read_cat()
-	for items in data:
-		print items, 
+	put_cat()				#when should I do this?
+	count = 0
+	for i in cat_class.cat_no:
+		count = count + 1
+		print '(%s) %s \t' % (i, cat_class.cat_no[i]),
+		if count == 6:
+			print
+	print	
 def getdata():
 	UID = str(time.time())
 	date = ND()
@@ -68,7 +85,7 @@ def getdata():
 	acct_2 = raw_input(":>")
 	print "Category"
 	print_cat()
-	print get_cat()
+	cat =  get_cat()
 	print "Comment/Memo:"
 	memo = raw_input(':>')
 	fmt = "%s\t%s\t%s\t%s\t%s\t%s\t%s"
@@ -76,11 +93,11 @@ def getdata():
 	write_f(towrite)
 	
 getdata()
-it = myfile
-it.file = open_f()
-print "Date\t\tUID\t\tAMT\tACCT\tTo/From\tCat.\tMemo"
-for items in it.file: 
-	print items, 
+#it = myfile
+#it.file = open_f()
+#print "Date\t\tUID\t\tAMT\tACCT\tTo/From\tCat.\tMemo"
+#for items in it.file: 
+#	print items, 
 #it.it
 
 class MyClass:
