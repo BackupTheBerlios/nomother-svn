@@ -8,7 +8,6 @@ from support import *
 def debit_f():
 	#f = open('debit_new.tab', 'r')		#New file format?
 	f = open('debit.tab', 'r')		#Old file format
-	#f = open('test2.dat', 'r')
 	debit = f.readlines()
 	z = open('debit_sorted.dat', 'w')
 	that = []
@@ -16,15 +15,8 @@ def debit_f():
 	y = [] 
 	for line in debit:
 		(year, mo, day, amt, biller, roomate) = line.split('\t', 5)
-		#for persons in roomate.split():
-		#	newlist.append(persons)
 		newlist.sort
-		#print newlist
-		#for x in newlist:
-		#	y = y + '\t' + x
-		#newlist = []
 		thing = year + '\t' + mo + '\t' + day + '\t' + amt + '\t' + biller + '\t' + roomate
-		#y = []
 		that.append(thing)
 	that.sort()
 	z.writelines(that)
@@ -109,11 +101,6 @@ def debit_totals(file):						#DEBITS
 			if person  == "TB":TB = share + TB
 	total = (JB+NG+CT+MC+DM+NS+BL+TB)
 	return (JB,NG,CT,MC,DM,NS,BL,TB, total)
-# 		RM = {'JB':0,'NG':0,'CT':0,'MC':0,'DM':0,'NS':0,'BL':0,'TB':0}
-# 		for person in group:
-# 			RM[person] = RM[person] + share
-# 		total = (RM['TB']+RM['JB']+ RM['NG']+RM['CT']+RM['MC']+RM['DM']+RM['NS']+RM['BL'])			
-# 		return (RM['JB'],RM['NG'],RM['CT'],RM['MC'],RM['DM'],RM['NS'],RM['BL'],RM['TB'], total)
 			
 def credit_totals(file):						#CREDITS DONE
 	(ref, yr, mo, day, rm ,amt) = (0, 1, 2, 3, 4, 5) 	#Set Credit file format
@@ -140,12 +127,10 @@ def diff(debit, credit):
  	(a, b, c, d, e, f, g, o, x, ) = debit
 	(h, i, j, k ,l, m, n, p, y) = credit
 	total = ((a-h), (b-i), (c-j), (d-k), (e-l), (f-m), (g-n),  (o-p), (x-y))
-# 	print total
 	return total
 
 
 def biller_totals(file):
-# 	billers = ('Nipsco', 'AEP')
 	(mo, day, yr, amt, bill, rm) = (0, 1, 2, 3, 4, 5) 	#Set Debit file format
 	(CT, DM, MC, NS, NG, BL, JB, TB) = (0,0,0,0,0,0,0,0)		#Init Variables
 	(Nipsco, AEP, Comcast,City,Vonage,Rent)= (0,0,0,0,0,0)

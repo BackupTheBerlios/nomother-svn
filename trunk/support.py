@@ -50,3 +50,7 @@ def g_day():
 	if len(input)< 2:
 		input = '0' + input
 	return input
+def g_amt():
+	print 'Amt:'
+	input = raw_input(pt)
+	return input

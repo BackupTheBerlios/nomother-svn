@@ -11,15 +11,12 @@ from update import *
 def menu():
 	while 1:
 		t1 = time.clock()
-# 		print "%20s %20s %20s %30s" % ('1 Yearly  Bal.','2 Yearly Totals','3 Db&Cr/Mo Person','4 Debits/Month Roomates TWO')
-# 		print '1 Yearly  Bal.\t2 Yearly Totals\t3 Db&Cr/Mo Person\t4 Debits/Month Roomates TWO'
-# 		print "%d %15s %20s %20s %30s"% 5, 'Acct Bal.','6 Print Month','7 Biller/Month','8 Debits/Month Billers TWO')
-# # 		print "5 Acct Bal.\t6 Print Month\t7 Biller/Month\t\t8 Debits/Month Billers TWO"
-# 		print '9 Add Credit\t10 Add Debit'
-		print 'Totals:\t1 Balances\t2 Yearly\t3 Monthly'
-		print 'Debits:\t4 Roomates\t5 Bills \t6 Monthly Bills'
-		print 'Show:\t7 Month\t\t71 All Months\t72 Invoices'
-		print 'Add:\t8 Credit\t9 Debit'
+		fmt = '%10s: (%2s)%10s  (%2s)%11s (%2s)%15s'
+		print fmt % ('Totals', '1', 'Balances', '2', 'Yearly','3','Monthly')
+		print fmt % ('Debits','4',  'Roomates', '5', 'Bills', '6','Monthly Bills') 
+		print fmt % ('Show', '7', 'Month', '71', 'All Months', '72','Invoices')
+		print fmt % ('Add', '8', 'Crediti', '9', 'Debit', '10','Misc')
+
 		choice = raw_input( pt)
 		if choice == '1':acct_summary()
 		elif choice == '2':yearly_totals()
@@ -27,20 +24,15 @@ def menu():
 		elif choice == '4':roomate_totals()
 		elif choice == '5':biller_month_totals()
 		elif choice == '6':biller_month_totals2()
-		
 		elif choice == '7':print_mo('','')
 		elif choice == '71':printMo()
 		elif choice == '8':add_credit()
-
 		elif choice == '9':add_debit()
-
 		elif choice == '10':print hd, '\n', ln % diff(debit_totals(debit_f()),credit_totals(credit_f()))
 		elif choice == '11':fileinfo()		
 		#elif choice == '9':biller_sums()	
 		elif choice == '72':invoice()				
-		
 		else:break
 		t2 = time.clock()
 		print 'Compute time:', t2-t1
 menu()
-

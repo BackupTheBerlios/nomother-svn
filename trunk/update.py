@@ -20,25 +20,13 @@ def updatemenu():
 		else:break
 
 def addbill():
-	#f = open ('debit_new.tab', 'r')
 	f = open ('debit.tab', 'r')
-	#mypar = f.readlines()
-	#par2 = string.split(mypar(1))
-	#print par2
-	#for vary in mypar:
-	#print mypar
-	#for i, v in enumerate(mypar):
- 	#	print i, v
-	#for items in mypar:
-	#	print mypar(items)
-	#print mypar
 	billline = f.readline()
 	it = {} 
 	while billline  <> '':
 		new = billline.split()
 		it = it + new
 		billline = f.readline()
-	#print 'addbill'
 	print it 
 
 
@@ -60,8 +48,7 @@ def add_credit():
 	mo = g_month()
 	day = g_day()
 	rm = g_roomate()
-	print 'Amt:'
-	amt = raw_input(pt)
+	amt = g_amt() 
 	it = (ref, yr,mo,day, rm, amt)
 	them  = ('Ref', 'Year', 'Month', 'Day', 'Roomate', 'Amt')
 	print fmt % them
@@ -71,7 +58,6 @@ def add_credit():
 	print
 	print '0:OK\t CR:NO'
 	go = raw_input(pt)
-	#print value
 	if go == '0':
 		f.write(value)
 		print 'Added', value
@@ -80,15 +66,12 @@ def add_credit():
 def add_debit():
 	fmt = '%s\t%s\t%s\t%s\t%s'
 	f = open('debit.tab', 'a')	
-	#f.write('\n')
 	print 'Ref #'
-	#ref = raw_input(pt)
 	yr = g_year()
 	mo = g_month()
 	day = g_day()
 	biller = g_biller()
-	print 'Amt:'
-	amt = raw_input(pt)
+	amt = g_amt() 
 	it = (yr, mo, day, amt, biller)
 	them  = ('Ref', 'Year', 'Month', 'Amt')
 	value = fmt % it
@@ -99,7 +82,6 @@ def add_debit():
 		if new <> '':
 			rm = '\t%s' % new
 			f.write(rm)
-	#f.write('\n')
 	f.close()
 
 #updatemenu()	
@@ -110,36 +92,14 @@ def fileinfo():
 	credit_fs = credit_f()
 	cr =  len(credit_fs)
 	db =  len(debit_fs)
-# 	print time.asctime()
-# 	print  time.ctime()
-# 	print time.gmtime()
-# 	print time.localtime()
 	x =  '\n' + str(cr) + '\t'+ str(db) + '\t'
 	z = str(time.localtime())
 	
 	w = ''
-# 	for items in z:
-# 		w = w + str(items)
-# 	print w
-# 	print '%s %s %s %s %s %s %s %s %s %s %s' % time.localtime()
-# 	print time.strftime('%Y/%m/%d %H:%M:%S',x)
 	d = open('updates.dat', 'r')
 	e = d.readlines()
-# 	for line in e:
-# 		f = line.split()
-# 		print f,
-# 		print len(line.split()) #'%s %s %s %s %s %s %s %s %s %s %s' % f
 		
-# 	d.close()
-# 	print x
-# 	pRint len(d)
-# 	d.seek(5,2)
-# 	print '-', d.readline()
-# 	for line in d:
-# 		print ':',line,
-# 	d.close()
 	d = open('updates.dat','a')
 	d.write(x)
-# 	print d
 	d.close()
 	print
