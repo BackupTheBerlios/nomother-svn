@@ -1,16 +1,69 @@
 from normalDate import ND 
 import time 
 
-print "time:   \t", time.time()
-print "asctime:\t", time.asctime()
-print "clock:  \t", time.clock()
-print "ctime:  \t", time.ctime()
-print "gmtime: \t", time.gmtime()
-print "strftime:\t", time.strftime('%a %b %d %H:%M%S %Y')
-today = ND()
-yes = today - 28 
-print today, yes
-print yes -1
-print "US", today.formatUS()
-print "add", today.add(-5)
-#z = today - 20050310
+def date():
+	today = ND()
+	yes = today - 28 
+	print today, yes
+	print yes -1
+	print "US", today.formatUS()
+	print "add", today.add(-5)
+def open_f():
+	f = open('test.dat', 'r')
+	data = f.readlines()
+	f.close()
+	return data
+def write_f(data):
+	z = open_f()
+	f = open('test.dat', 'w') 
+	data = data + '\n'
+	z.append(data)
+	z.sort()
+	f.writelines(z)
+	f.close()
+class myfile:
+	def __init__(self, myfile=open_f()):
+		pass
+	file = open_f()
+	def it(self, say='hi'):
+		print say 
+	
+def getdata():
+	UID = str(time.time())
+	date = ND()
+	date_fmt = str(date.formatUS())
+	date = str(date)
+	print 'Default Date:', date, date_fmt 
+	print 'Change Date? <enter> to accept default'
+	newdate = raw_input('Change date?')
+	if newdate <> '':
+		date = newdate
+	print 'Amount:'
+	amt = raw_input(':>')
+	print "Account"
+	acct_1 = raw_input(":>")
+	print "To/From"
+	acct_2 = raw_input(":>")
+	print "Category"
+	cat = raw_input(':>')
+	print "Comment/Memo:"
+	memo = raw_input(':>')
+	fmt = "%s\t%s\t%s\t%s\t%s\t%s\t%s"
+	towrite = fmt % (date, UID, amt, acct_1, acct_2, cat, memo)
+	write_f(towrite)
+	#towrite = date + '\t' + UID + '\t' + amt + '\t'+ acct_1 + '\t' + acct_2 + '\t' + cat + '\t' + memo; write_f(towrite)
+getdata()
+it = myfile
+it.file = open_f()
+print "Date\t\tUID\t\tAMT\tACCT\tTo/From\tCat.\tMemo"
+for items in it.file: 
+	print items, 
+#it.it
+
+class MyClass:
+	"A simple example class"
+	i = 12345
+	def f(self):
+		return 'Hello World'
+	
+
