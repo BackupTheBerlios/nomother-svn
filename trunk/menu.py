@@ -8,7 +8,6 @@ from reports import *
 from support import *
 from update import *
 
-
 def menu():
 	while 1:
 		t1 = time.clock()
