@@ -1,0 +1,135 @@
+01	01	0000	1000	Misc													MC
+01	01	0000	1000	Misc													BL
+07	01	2002	500	RENT													JB	DM
+07	17	2002	59.0	Nipsco												JB	DM
+08	01	2002	500	RENT													JB	DM
+08	23	2002	130.0	City													JB	DM
+09	01	2002	500	RENT													JB	DM
+10	01	2002	500	RENT													JB	DM
+10	11	2002	177.0	Nipsco												JB	DM
+10	15	2002	187.77	City													JB	DM
+11	01	2002	500	RENT													JB	DM
+12	01	2002	500	RENT													JB	DM
+12	17	2002	73.23	City													JB	DM
+12	12	2002	50.46	City													JB	DM
+02	18	2003	38.0	City													JB	DM
+03	01	2003	500	RENT													JB	DM
+03	18	2003	9.46	City													JB	DM
+04	01	2003	500	RENT													JB	DM
+04	17	2003	37.83	City													JB	DM
+05	01	2003	500	RENT													JB	DM
+05	16	2003	50.63	City													JB	DM
+06	01	2003	500	RENT													JB	DM
+05	16	2003	37.46	Comcast												JB	DM
+06	16	2003	47.43	City													JB	DM
+06	30	2003	138.0	Nipsco												JB	DM
+06	30	2003	37.36	Comcast												JB	DM
+06	30	2003	58.35	AEP													JB	DM
+07	01	2003	600	RENT													JB	NG	CT
+07	10	2003	159.17	AEP												JB	NG	CT
+07	14	2003	36.21	Comcast												JB	NG	CT
+07	16	2003	34.63	City													JB	NG	CT
+07	30	2003	168	Nipsco												JB	NG	CT
+08	01	2003	600	RENT													JB	NG	CT
+08	12	2003	168.0	Nipsco												JB	NG	CT
+08	18	2003	37.83	City													JB	NG	CT
+09	01	2003	600	RENT													JB	NG	CT
+09	18	2003	56.02	Comcast												JB	NG	CT
+09	09	2003	49.65	AEP													JB	NG	CT
+09	12	2003	168.0	Nipsco												JB	NG	CT
+09	15	2003	37.83	City													JB	NG	CT
+10	01	2003	600	RENT													JB	NG	CT
+10	14	2003	54.0	AEP													JB	NG	CT
+10	14	2003	168.0	Nipsco												JB	NG	CT
+10	15	2003	37.83	City													JB	NG	CT
+11	01	2003	600	RENT													JB	NG	CT
+11	17	2003	34.63	City													JB	NG	CT
+11	24	2003	114.34	Comcast												JB	NG	CT
+12	01	2003	600	RENT													JB	NG	CT
+12	26	2003	64.0	Comcast												JB	NG	CT
+12	15	2003	34.63	City													JB	NG	CT
+01	01	2004	600	RENT													JB	NG	CT	NS
+01	09	2004	75.0	Comcast												JB	NG	CT	NS
+01	16	2004	37.83	City													JB	NG	CT	NS
+01	01	2004	168	Nispco												JB	NG	CT	NS
+02	01	2004	600	RENT													JB	NG	CT	NS
+02	05	2004	68.08	Vonage												JB	NG	CT	NS
+02	17	2004	42.51	Comcast												JB	NG	CT	NS
+02	20	2004	54.00	AEP													JB	NG	CT	NS
+02	20	2004	168	Nipsco												JB	NG	CT	NS
+03	01	2004	600	RENT													JB	NG	CT	NS
+03	05	2004	29.28	Vonage												JB	NG	CT	NS
+03	15	2004	56.0	Comcast												JB	NG	CT	NS
+03	19	2004	168	Nipsco												JB	NG	CT	NS
+03	19	2004	54.00	AEP													JB	NG	CT	NS
+04	01	2004	600	RENT													JB	NG	CT
+04	05	2004	30.03	Vonage												JB	NG	CT
+04	15	2004	56.0	Comcast												JB	NG	CT
+04	19	2004	54.00	AEP													JB	NG	CT
+04	22	2004	168	Nipsco												JB	NG	CT
+05	01	2004	600	RENT													JB	NG	CT
+05	05	2004	27.24	Vonage												JB	NG	CT
+05	17	2004	56.0	Comcast												JB	NG	CT
+05	20	2004	54.00	AEP													JB	NG	CT
+05	21	2004	168	Nipsco												JB	NG	CT
+05	24	2004	44.23	City													JB	NG	CT
+06	01	2004	600	RENT													JB	NG	CT
+06	05	2004	27.24	Vonage												JB	NG	CT
+06	10	2004	59.39	Comcast												JB	NG	CT
+06	15	2004	34.15	City													JB	NG	CT
+06	18	2004	54.00	AEP													JB	NG	CT
+06	21	2004	137	Nipsco												JB	NG	CT
+06	15	2004	34.15	City													JB	NG	CT
+07	01	2004	600	RENT													JB	NG	CT
+07	05	2004	33.41	Vonage												JB	NG	CT
+07	12	2004	59.39	Comcast												JB	NG	CT
+07	12	2004	44.33	City													JB	NG	CT
+07	23	2004	137	Nipsco												JB	NG	CT
+08	01	2004	600	RENT													JB	NG	CT
+08	05	2004	33.41	Vonage												JB	NG	CT
+08	05	2004	17.28	Vonage												NG
+08	10	2004	59.29	Comcast												JB	NG	CT
+08	16	2004	15.25	AEP													JB	NG	CT
+08	22	2004	137	Nipsco												JB	NG	CT
+09	15	2004	46.00	AEP													JB	CT
+09	20	2004	137	Nipsco												JB	CT
+08	01	2004	59.29	Comcast												JB	CT
+09	29	2004	46	Nipsco												JB	CT
+11	18	2002	59	Nipsco												JB	DM
+12	20	2002	59	Nipsco												JB	DM	
+01	23	2003	59	Nipsco												JB	DM
+01	01	2003	500	RENT													JB	DM
+02	21	2003	59	Nipsco												JB	DM
+02	01	2003	500	RENT													JB	DM
+03	18	2003	50	AEP													JB	DM
+03	21	2003	59	Nipsco												JB	DM
+04	18	2003	59	Nipsco												JB	DM
+05	19	2003	80.92	AEP													JB	DM
+05	19	2003	59	Nipsco												JB	DM
+07	11	2003	100	Nipsco												JB	NG	CT
+11	17	2003	54	AEP													JB	NG	CT
+11	21	2003	168	Nipsco												JB	NG	CT
+12	19	2003	168	Nipsco												JB	NG	CT
+12	22	2003	54	AEP													JB	NG	CT
+01	16	2004	54	AEP													JB	NG	CT
+01	23	2004	168	Nipsco												JB	NG	CT
+09	01	2004	500	RENT													JB	CT
+09	01	2004	100	RENT													NG
+10	01	2004	500	RENT													JB	CT
+10	01	2004	100	RENT													NG
+01	01	2003	207	Misc													JB	CT
+01	01	2002	250	RENT													JB
+02	01	2002	250	RENT													JB
+03	01	2002	250	RENT													JB
+04	01	2002	250	RENT													JB
+05	01	2002	250	RENT													JB
+06	01	2002	250	RENT													JB
+01	20	2005	46	AEP												JB	CT	TB
+12	24	2004	137	NISPCO												JB	CT	TB
+12	27	2004	59.39	Comcast												JB	CT	TB
+01	01	2005	600	RENT												JB	CT	TB
+01	00	2005	46	AEP												JB	CT	TB
+01	00	2005	137	NISPCO												JB	CT	TB
+01	00	2005	59.39	Comcast 											JB	CT	TB
+01	00	2005	14.99	Vonage												JB	CT	TB
+01	27	2005	54.47	City												JB	CT	TB
